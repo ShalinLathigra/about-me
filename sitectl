@@ -1,0 +1,25 @@
+#!/bin/bash
+
+usage(){
+	echo "Usage: $0 [COMMAND]"
+	echo "  start,  Start the server"
+	echo "  info,   Read nginx -V"
+}
+
+start(){
+	docker run \
+		-it \
+		--rm \
+		-d \
+		-p 8080:80 \
+		--name web \
+		-v /home/merlin/Projects/about-me/site-content:/usr/share/nginx/html \
+		-v /home/merlin/Projects/about-me/nginx:/etc/nginx \
+		nginx
+}
+
+info(){
+	docker exec -it web nginx -V
+}
+
+start

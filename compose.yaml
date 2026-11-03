@@ -1,0 +1,20 @@
+name: about-me
+services:
+    nginx:
+        stdin_open: true
+        tty: true
+        ports:
+            - 8080:80
+        container_name: nginx
+        volumes:
+            - /home/merlin/Projects/about-me/site-content:/usr/share/nginx/html
+            - /home/merlin/Projects/about-me/nginx:/etc/nginx
+        image: nginx
+    test:
+    	stdin_open: true
+    	tty: true
+    	ports:
+    		- 8080:8080
+    	container_name: test
+    	volumes:
+    		- /home/merlin/Projects/about-me/test:/usr/share/test
