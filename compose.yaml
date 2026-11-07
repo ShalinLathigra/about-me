@@ -11,10 +11,11 @@ services:
             - /home/merlin/Projects/about-me/nginx:/etc/nginx
         image: nginx
     test:
-    	stdin_open: true
-    	tty: true
-    	ports:
-    		- 8080:8080
-    	container_name: test
-    	volumes:
-    		- /home/merlin/Projects/about-me/test:/usr/share/test
+        stdin_open: true
+        build: ./test
+        tty: true
+        ports:
+            - 8081:8080
+        container_name: test
+        volumes:
+            - /home/merlin/Projects/about-me/test:/usr/share/test
