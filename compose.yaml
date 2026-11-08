@@ -4,18 +4,31 @@ services:
         stdin_open: true
         tty: true
         ports:
-            - 8080:80
+            - "127.0.0.1:8080:80"
         container_name: nginx
         volumes:
             - /home/merlin/Projects/about-me/site-content:/usr/share/nginx/html
             - /home/merlin/Projects/about-me/nginx:/etc/nginx
         image: nginx
-    test:
+        networks:
+        - app_net
+        depends_on: # Ensures that services start before nginx
+        - fileshare
+    fileshare:
         stdin_open: true
-        build: ./test
+        # Tells it what directory to be in basically.
+        build: ./fileshare 
         tty: true
-        ports:
-            - 8081:8080
-        container_name: test
+        # Doesn't need a ports block because it's not exposed externally
+        container_name: fileshare
+        # Maps the fileshare content folder to the internal /usr/share/content
+        # directory of the container
+        # **Had to run with docker compose up --build the first time because
+        # I had made Dockerfile changes that weren't picked up!!!
         volumes:
-            - /home/merlin/Projects/about-me/test:/usr/share/test
+            - /home/merlin/Projects/about-me/fileshare/content:/usr/share/content
+        networks:
+        - app_net
+networks:
+    app_net:
+        driver: bridge
