@@ -27,6 +27,7 @@
 	clicky things*/
 	--action: #A870FF;
 	--hover: #FF6B6B;
+	--used: #522894;
 	
 }
 body {
@@ -38,7 +39,7 @@ body {
 h1 {
 	border-style: solid;
 	border-color: var(--bg-struct);
-	border-radius: 8px;
+	border-radius: 16px;
 	border-width: 4px;
 	color: var(--text-pop);
 	padding: 8px;
@@ -49,16 +50,66 @@ h2, h3 {
 table {
 	border-style: solid;
 	border-color: var(--bg-struct);
-	border-radius: 8px;
+	border-radius: 16px;
+	border-spacing: 2px;
 	border-width: 4px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 8px;
 }
-th {
-	color: var(--text-header);
+img {
+	margin: 20px auto;
+	max-width: 100%;
+	display:block;
 }
-a {
+thead{
+	background-color: var(--bg-struct);
+}
+tbody{
+	background-color: var(--text-pop);
+}
+tfoot{
+	background-color: var(--text-footer);
+}
+th {
+	color: var(--text);
+	border-color: var(--text-header);
+}
+td {
+	border-color: var(--text-footer);
+}
+th, td {
+	border-style: dotted;
+	border-radius: 8px;
+	border-width: 2px;
+}
+th:hover, td:hover {
+	background-color: var(--hover);
+}
+tr:nth-child(even) {
+	background-color: var(--action);
+}
+a:link {
 	color: var(--action);
 }
 a:hover {
+	background-color: var(--action);
 	color: var(--hover);
+}
+a:active{
+	background-color: var(--hover);
+	color: var(--used);
+}
+a:visited {
+	color: var(--used);
+}
+address {
+	text-align: left;
+}
+
+p,pre,q {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }

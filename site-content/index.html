@@ -1,41 +1,102 @@
 <!doctype html>
 <html lang="en-CA">
 	<head>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="common/styles.css">
+		<link rel="icon" type="image/svg+xml" href="/images/turtle.svg">
+		<title>About Me</title>
 	</head>
 	<body>
-		<h1>Hello from Shalin's Website</h1>
-		<h2>Hello from Shalin's Website</h2>
-		<h3>Hello from Shalin's Website</h3>
+		<h1><b>Hello</b> <strong>from</strong> <a href="#end"><i>Shalin's</i></a> <em>Website</em></h1>
+		<h2><mark>Hello</mark> <small>from</small> <del>Shalin's</del> <ins>Website</ins></h2>
+		<h3><sub>I</sub> <sup>like</sup> <a href="index.html#games"><abbr title="Godot rules">Games</abbr></a></h3>
+		<blockquote>I don't know who I am, but I'd like to find out</blockquote>
+		<p>
+			<q>"You miss 100% of the shots you don't <a href="https://www.w3schools.com/html/html_lists_unordered.asp">take</a>"-Wayne Gretzky</q>
+			-Michael Scott
+		</p>
 		<table>
-			<tr>
-				<th>Source</th>
-				<th>Summary</th>
-			</tr>
-			<tr>
-				<td><a href="https://www.w3schools.com/html/html_basic.asp">W3 HTML</a></td>
-				<td>Basics on HTML</td>
-			</tr>
-			<tr>
-				<td><a href="https://www.w3schools.com/css/css_intro.asp">W3 CSS</a></td>
-				<td>Basics on CSS</td>
-			</tr>
-			<tr>
-				<td><a href="https://htmx.org/docs/">HTMX</a></td>
-				<td>HTMX Documentation</td>
-			</tr>
-			<tr>
-				<td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Ha</a></td>
-				<td>Got'em</td>
-			</tr>
+			<caption>Neat Links</caption>
+			<thead>
+				<tr>
+					<th>Source</th>
+					<th>Summary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a title="Learning is Hard(_blank)" target="_blank" href="https://www.w3schools.com/html/html_basic.asp">W3 HTML</a></td>
+					<td>Basics on HTML</td>
+				</tr>
+				<tr>
+					<td> <a title="W3 JS... There's a lot..._parent" target="_parent" href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a></td>
+					<td>This is a lot to cover</td>
+				</tr>
+				<tr>
+					<td><a target="_top" title="Ooooh, Pretty! (_top)" href="https://www.w3schools.com/colors/colors_names.asp">W3 Colours</a></td>
+					<td>140 Colours!</td>
+				</tr>
+				<tr>
+					<td><a title="References are good" href="https://www.w3schools.com/tags/">W3 Tags</a></td>
+					<td>That's a big list</td>
+				</tr>
+				<tr>
+					<td><a title="Learning is Good" href="https://www.w3schools.com/css/css_intro.asp">W3 CSS</a></td>
+					<td>Basics on CSS</td>
+				</tr>
+				<tr>
+					<td><a title="Learning makes me feel better" href="https://htmx.org/docs/">HTMX</a></td>
+					<td>HTMX Documentation</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><a title="Learning is Easy" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Ha</a></td>
+					<td>Got'em</td>
+				</tr>
+			</tfoot>
 		</table>
-		<br>
-		<img src="/images/godot.svg"
-			title="I like Godot"
-			alt="I like Godot"
-			width="256" height="256">
-		<br>
-		<a href="/fileshare/">File Share</a>
-		<p style="color:var(--text-footer)">This is a footer</p>
+		<a id="games" target="_blank" href="https://godotengine.org/">
+			<img src="/images/godot.svg"
+				title="I like Godot"
+				alt="I like Godot"
+				style="width:256px;height:256px;float:right;">
+		</a>
+		<p>
+			<cite><bdo dir="rtl">Godot</bdo></cite> by the Godot Foundation. Released publicly January 14th 2014
+		</p>
+		<button onclick="document.location='/fileshare/'">To Fileshare</button>
+		<p style="color:var(--text-footer)">
+			This is a footer
+		</p>
+		<pre>
+			This is a
+			set of  text
+
+			that keeps its
+
+			formatting
+		</pre>
+
+		<section>
+			<img src="/images/skyrim.gif" style="width:513px;float:left;">
+			A long long time ago, in a city far far away, I played Skyrim
+		</section>
+		<section>
+			<picture>
+				<source media="(min-width: 1600px)" srcset="/images/picture/hokusai-waves.jpg">
+				<source media="(min-width: 1000px)" srcset="/images/picture/astronomicum-caesareum.jpg">
+				<source media="(min-width: 800px)" srcset="/images/picture/melancolia-i.jpg">
+				<img src="/images/picture/van-goph.jpg" style="width:50%;height:auto;">
+			</picture>
+		</section>
+		<footer>
+			<address id="end">
+			Written by me<br>
+			today, tomorrow, or maybe a different day<br>
+			here and sometimes there<br>
+			Earth rules<br>
+			Don't <a target="_blank" href="mailto:shalintl101@gmail.com">EMAIL</a>
+			</address>
+		</footer>
 	</body>
 </html>
