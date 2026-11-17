@@ -22,3 +22,21 @@ Stage 2:
 - Make an actually helpful folder
 - Load bloom up into the python one
 
+
+
+Okaaay, so what I'm learning is that I should be structuring it kind of like:
+
+Section
+	Headers
+	Divs sorting content
+Next Section
+
+Then tags can help to organize everything and let me jump around
+Then I'll use CSS classes to automate the looks so I don't need to actually do much
+of that myself
+
+Can use iframes to open portals to things like the file browser!
+
+Next things I've got to figure out are integrating scripts and javascript better and
+using HTML forms more seamlessly (Also making my own re-usable forms) and swapping out
+page content/pulling up popups and all that jazz.
